@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazione Viaggio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color:#5F9EA0;
+        }
+         h2 {
+            text-align: center;
+        }
+        .form {
+            background:#B0E0E6;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 40%; /* Modifica qui */
+            margin: 50px auto; /* Modifica qui */
+        }
+       
+        .form-label {
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+			box-sizing: border-box;
+            padding: 8px;
+            margin: 5px auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+        }
+        .form-check-input {
+            margin-right: 10px;
+        }
+        .btn {
+            background-color:#5F9EA0;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+       	.btn2 {
+			text-align: center;
+			margin-left:41%;
+    		color:grey;
+    		text-decoration:none;
+		}
+		
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form">
+        <h2>Prenotazione Viaggio</h2>
+        <form action="Avvio" method="post">
+            <label class="form-label">Nome Cliente</label>
+            <input type="text" name="nome_cliente" class="form-control" required>
+            
+            <label class="form-label">Cognome Cliente</label>
+            <input type="text" name="cognome_cliente" class="form-control" required>
+            
+            <label class="form-label">Codice Fiscale</label>
+            <input type="text" name="codice_fiscale" class="form-control" maxlength="16" required>
+            
+            <label class="form-label">Compagnia Aerea</label>
+            <input type="text" name="compagnia_aerea" class="form-control" required>
+            
+            <label class="form-label">Numero Adulti</label>
+            <input type="number" name="n_adulti" class="form-control" min="0" required>
+            
+            <label class="form-label">Numero Bambini</label>
+            <input type="number" name="n_bambini" class="form-control" min="0" required>
+            <br>
+            <label class="form-label" >Data Partenza</label>
+            <input type="date" name="data_partenza"required>
+            <br><br>
+            <label class="form-label">Data Arrivo</label>
+            <input type="date" name="data_arrivo" required>
+            <br><br>
+            <label class="form-label">Da</label>
+            <input type="text" name="da" class="form-control" required>
+            
+            <label class="form-label">A</label>
+            <input type="text" name="a" class="form-control" required>
+            
+            <label class="form-label">Importo Pagato (€)</label>
+            <input type="number" step="1" name="importo_pagato" class="form-control" min="0" required>
+            
+            <div>
+                <input type="checkbox" name="bagaglio" class="form-check-input">
+                <label class="form-check-label">Bagaglio incluso</label>
+            </div>
+            <br>
+            <button type="submit" class="btn">Prenota</button>
+            <br><br>
+            <a href="home.html" class="btn2" > Torna alla Home</a>
+        </form>   
+    </div>
+    
+  
+    
+    
+</body>
+</html>
+
